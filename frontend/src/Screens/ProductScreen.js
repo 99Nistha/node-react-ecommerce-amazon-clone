@@ -13,7 +13,7 @@ function ProductScreen(props){
             <div className="details-image">
                 <img src={product.image} alt="product"></img>
             </div>
-            <div classname="details-info">
+            <div className="details-info">
                 <ul>
                     <li>
                         <h4>{product.name}</h4>
