@@ -148,7 +148,7 @@ a:hover{
   flex: 2 1 60rem;
 }
 .details-image img{
-  max-width: 60rem;
+  max-width: 50rem;
   width: 100%;
 }
 .details-info {
@@ -156,4 +156,14 @@ a:hover{
 }
 .details-action {
   flex: 1 1 30rem;
+}
+.details-info ul, .details-action ul{
+  list-style-type: none;
+  padding: 0;
+}
+.details-info li, .details-action li{
+  margin-bottom: 1rem;
+}
+.back-to-result {
+  padding: 1rem;
 }
