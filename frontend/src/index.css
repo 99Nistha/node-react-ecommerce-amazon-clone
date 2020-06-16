@@ -7,6 +7,9 @@ body{
   margin: 0;
   height: 100vh;
 }
+#root{
+  height:100%;
+}
 
 .grid-container{
   display: grid;
@@ -95,7 +98,7 @@ a:hover{
 }
 .product-image{
   max-width: 34rem;
-  max-height: 48rem;
+  max-height: 100rem;
 }
 .product-rating{
   margin-bottom: 1rem;
@@ -131,4 +134,26 @@ a:hover{
   position: absolute;
   right: .5rem;
   top: 1.5rem;
+}
+
+/* Product Details */
+.details{
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  padding: 1rem;
+}
+.details-image {
+  flex: 2 1 60rem;
+}
+.details-image img{
+  max-width: 60rem;
+  width: 100%;
+}
+.details-info {
+  flex: 1 1 30rem;
+}
+.details-action {
+  flex: 1 1 30rem;
 }

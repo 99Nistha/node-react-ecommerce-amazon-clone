@@ -1,6 +1,7 @@
 export default{
     products:[
     {
+        _id:'1',
         name: 'Slim Shirt',
         category:'Shirts',
         image:'/images/d1.jpeg',
@@ -10,6 +11,7 @@ export default{
         numReviews:10
     },
     {
+        _id:'2',
         name: 'Large Shirt',
         category:'Shirts',
         image:'/images/d1.jpeg',
@@ -19,6 +21,7 @@ export default{
         numReviews:10
     },
     {
+        _id:'3',
         name: 'Slim Shirt',
         category:'pants',
         image:'/images/d1.jpeg',
