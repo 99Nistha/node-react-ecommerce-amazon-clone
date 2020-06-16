@@ -10,7 +10,7 @@ export default{
         numReviews:10
     },
     {
-        name: 'Slim Shirt',
+        name: 'Large Shirt',
         category:'Shirts',
         image:'/images/d1.jpeg',
         price:70,
