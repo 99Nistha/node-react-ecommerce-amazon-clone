@@ -1,6 +1,8 @@
 import React from 'react';
 import {Link} from 'react-router-dom'
 import data from '../data';
+import axios from 'axios';
+
 function HomeScreen(props){
     return <ul className="products">
     {
