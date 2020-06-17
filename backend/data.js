@@ -8,7 +8,8 @@ export default{
         price:60,
         brand:'Nike',
         rating:4.5,
-        numReviews:10
+        numReviews:10,
+        countInStocks: 6
     },
     {
         _id:'2',
@@ -18,7 +19,8 @@ export default{
         price:70,
         brand:'Gucci',
         rating:3.2,
-        numReviews:10
+        numReviews:10,
+        countInStocks: 7
     },
     {
         _id:'3',
@@ -28,7 +30,8 @@ export default{
         price:60,
         brand:'Nike',
         rating:4.2,
-        numReviews:10
+        numReviews:10,
+        countInStocks: 6
     }
 ]
 }
