@@ -156,7 +156,7 @@ a:hover{
 }
 .details-image img{
   max-width: 60rem;
-  width: 100%;
+  width: 60%;
 }
 .details-info {
   flex: 1 1 30rem;
@@ -308,6 +308,7 @@ th{
 tbody>tr:nth-child(odd){
   background-color: #f0f0f0;
 }
+
 /* Checkout Steps */
 
 .checkout-steps{
@@ -327,6 +328,7 @@ tbody>tr:nth-child(odd){
   border-top: .3rem #f08000 solid;
   color: #f08000;
 }
+
 /* Place Order */
 
 .placeorder{
@@ -372,3 +374,72 @@ tbody>tr:nth-child(odd){
 .placeorder-actions-payment > div {
   width: 100%;
 }
+
+/* Profile */
+
+.profile{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.profile-info{
+  flex: 1 1 30rem;
+}
+.profile-orders{
+  flex: 3 1 60rem;
+}
+
+/* admin */
+.dropdown{
+  display: inline-block;
+  position: relative;
+}
+.dropdown-content{
+  position: absolute;
+  display: none;
+  right:0;
+  padding: 1rem;
+  list-style-type: none;
+  z-index: 1;
+  background-color: #203040;
+  margin:0;
+  margin-top:0.4rem;
+}
+.dropdown:hover .dropdown-content{
+  display: block;
+}
+
+/* filter */
+
+.filter{
+  display: flex;
+  list-style-type: none;
+  padding: 0;
+  margin: 1rem auto;
+  max-width: 45rem;
+  justify-content: space-between;
+  align-items: center;
+}
+.filter input,
+.filter button,
+.filter select{
+  padding: 1rem;
+  border-radius: 0.5rem;
+  border:.1rem #c0c0c0 solid;
+  font-size: 1.6rem;
+
+}
+.categories{
+
+  padding: 0;
+  list-style-type: none;
+}
+.categories a{
+  display: flex;
+  padding: 1rem;
+}
+
+.categories a:hover{
+  background-color: #c0c0c0;
+}
+
