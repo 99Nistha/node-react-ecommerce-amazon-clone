@@ -31,8 +31,5 @@
     "build": "rm -rf dist && babel backend -d dist",
     "heroku-postbuild": "npm run build && cd frontend && npm install && npm run build"
   },
-  "engines":{
-    "node":"10.10.0",
-    "npm":"6.14.5"
-  }
+  "engines": { "node": "12.4.0", "npm": "6.9.0"}
 }
