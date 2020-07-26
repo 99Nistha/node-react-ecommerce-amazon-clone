@@ -1,45 +1,33 @@
-"use strict";
+import express from 'express';
+import path from 'path';
+import mongoose from 'mongoose';
+import bodyParser from 'body-parser';
+import config from '../backend/config';
+import userRoute from '../backend/routes/userRoute';
+import productRoute from '../backend/routes/productRoute';
+import orderRoute from '../backend/routes/orderRoute';
 
-var _express = _interopRequireDefault(require("express"));
-
-var _path = _interopRequireDefault(require("path"));
-
-var _mongoose = _interopRequireDefault(require("mongoose"));
-
-var _bodyParser = _interopRequireDefault(require("body-parser"));
-
-var _config = _interopRequireDefault(require("./config"));
-
-var _userRoute = _interopRequireDefault(require("./routes/userRoute"));
-
-var _productRoute = _interopRequireDefault(require("./routes/productRoute"));
-
-var _orderRoute = _interopRequireDefault(require("./routes/orderRoute"));
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
-
-var mongodbUrl = _config["default"].MONGODB_URL;
-
-_mongoose["default"].connect(mongodbUrl, {
+const mongodbUrl = config.MONGODB_URL;
+mongoose.connect(mongodbUrl, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
-  useCreateIndex: true
-})["catch"](function (error) {
-  return console.log(error.reason);
+  useCreateIndex: true,
+}).catch((error) => console.log(error.reason));
+
+
+const app = express();
+app.use(bodyParser.json());
+
+app.use('/api/users', userRoute);
+app.use('/api/products', productRoute);
+app.use('/api/orders', orderRoute);
+app.get('/api/config/paypal', (req, res) => {
+  res.send(config.PAYPAL_CLIENT_ID);
 });
 
-var app = (0, _express["default"])();
-app.use(_bodyParser["default"].json());
-app.use('/api/users', _userRoute["default"]);
-app.use('/api/products', _productRoute["default"]);
-app.use('/api/orders', _orderRoute["default"]);
-app.get('/api/config/paypal', function (req, res) {
-  res.send(_config["default"].PAYPAL_CLIENT_ID);
+app.use(express.static(path.join(__dirname, '/../frontend/build')));
+app.get('*', (req, res) => {
+  res.sendFile(path.join(`${__dirname}/../frontend/build/index.html`));
 });
-app.use(_express["default"]["static"](_path["default"].join(__dirname, '/../frontend/build')));
-app.get('*', function (req, res) {
-  res.sendFile(_path["default"].join("".concat(__dirname, "/../frontend/build/index.html")));
-});
-app.listen(_config["default"].PORT, function () {
-  console.log('Server started at http://localhost:5000');
-});
+
+app.listen(config.PORT, () => { console.log('Server started at http://localhost:5000'); });
