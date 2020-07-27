@@ -15,7 +15,3 @@ I build a fully-functional e-commerce website using React and Node.JS.
 - MongoDB: Mongoose, Aggregation
 - Development: ESLint, Babel, Git, Github,
 - Deployment: Heroku
-- Watch React & Node Tutorial
-## Summary
-
-I have made an eCommerce website like Amazon.
