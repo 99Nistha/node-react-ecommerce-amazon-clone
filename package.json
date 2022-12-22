@@ -10,7 +10,7 @@
     "dotenv": "^8.2.0",
     "eslint-plugin-react": "^7.20.0",
     "express": "^4.17.1",
-    "jsonwebtoken": "^8.5.1",
+    "jsonwebtoken": "^9.0.0",
     "mongoose": "^5.9.19",
     "multer": "^1.4.2",
     "redux": "^4.0.5"
